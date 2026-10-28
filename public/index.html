@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ortak Futbolcu</title>
+<style>
+:root{--bg:#f4f6f3;--card:#fff;--tx:#14231a;--mu:#5d6b62;--ac:#1f9d55;--bad:#d64545;--bd:#dde3dd}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1a14;--card:#17261d;--tx:#eaf3ec;--mu:#93a59a;--ac:#35c777;--bad:#ef6a6a;--bd:#27382d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+main{max-width:520px;margin:0 auto;padding:20px 16px}
+h1{font-size:24px;margin:0 0 4px}
+p.s{color:var(--mu);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;margin-bottom:14px}
+button,input{font:inherit;border-radius:12px;border:1px solid var(--bd);padding:12px 14px;background:var(--card);color:var(--tx)}
+button{background:var(--ac);color:#fff;border:0;font-weight:600;cursor:pointer}
+button.g{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+button:disabled{opacity:.5}
+input{width:100%}
+.row{display:flex;gap:8px}.hide{display:none}
+.score{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:18px}
+.score span.n{font-size:34px}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:14px 0}
+.bar i{display:block;height:100%;background:var(--ac);width:100%}
+.teams{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;font-size:20px;font-weight:700;margin:14px 0}
+.teams b{flex:1;padding:16px 6px;border-radius:12px;background:var(--bg)}
+#fb{min-height:22px;margin:10px 0 0;font-weight:600}
+.ok{color:var(--ac)}.no{color:var(--bad)}.mu{color:var(--mu)}
+.code{font-size:34px;letter-spacing:6px;font-weight:800;text-align:center}
+</style>
+</head>
+<body>
+<main>
+<h1>⚽ Ortak Futbolcu</h1>
+<p class="s">İki takımda da oynamış bir futbolcuyu rakibinden önce bul. İlk 3 puanı alan kazanır.</p>
+
+<section id="lobby" class="card">
+  <button id="mk" style="width:100%">Oda kur</button>
+  <p class="mu" style="text-align:center;margin:12px 0">ya da</p>
+  <div class="row"><input id="cd" maxlength="4" placeholder="Oda kodu"><button id="jn" class="g">Katıl</button></div>
+  <p id="lm" class="mu" style="margin:12px 0 0"></p>
+</section>
+
+<section id="wait" class="card hide">
+  <div class="mu" style="text-align:center">Arkadaşına bu kodu gönder</div>
+  <div id="rc" class="code"></div>
+  <p class="mu" style="text-align:center;margin:8px 0 0">Rakip bağlanınca oyun başlar…</p>
+</section>
+
+<section id="game" class="hide">
+  <div class="card">
+    <div class="score"><div>Sen <span class="n" id="me">0</span></div><div class="mu" id="rn"></div><div><span class="n" id="op">0</span> Rakip</div></div>
+    <div class="bar"><i id="br"></i></div>
+    <div class="teams"><b id="ta"></b><span class="mu">&amp;</span><b id="tb"></b></div>
+    <div class="row"><input id="an" placeholder="Ortak oyuncunun adı" autocomplete="off"><button id="sb">Gönder</button></div>
+    <div id="fb"></div>
+  </div>
+  <div id="res" class="card hide" style="text-align:center;font-weight:600"></div>
+  <button id="again" class="hide" style="width:100%">Yeniden oyna</button>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const ws=new WebSocket((location.protocol==="https:"?"wss://":"ws://")+location.host);
+let end=0,ms=12000,tm=null,got=false;
+const show=id=>["lobby","wait","game"].forEach(x=>$(x).classList.toggle("hide",x!==id));
+const send=o=>ws.readyState===1&&ws.send(JSON.stringify(o));
+ws.onopen=()=>{$("lm").textContent=""};
+ws.onclose=()=>{$("lm").textContent="Bağlantı koptu, sayfayı yenile.";show("lobby")};
+ws.onmessage=e=>{
+  const d=JSON.parse(e.data);
+  if(d.t==="code"){$("rc").textContent=d.code.toUpperCase();show("wait")}
+  else if(d.t==="err"){$("lm").textContent=d.msg}
+  else if(d.t==="round"){
+    show("game");got=false;ms=d.ms;end=Date.now()+ms;
+    $("me").textContent=d.me;$("op").textContent=d.opp;$("rn").textContent="Tur "+d.n;
+    $("ta").textContent=d.a;$("tb").textContent=d.b;
+    $("fb").textContent="";$("fb").className="";
+    $("res").classList.add("hide");$("again").classList.add("hide");
+    $("an").value="";$("an").disabled=false;$("sb").disabled=false;$("an").focus();
+    clearInterval(tm);
+    tm=setInterval(()=>{
+      const l=end-Date.now();
+      $("br").style.width=Math.max(0,l/ms*100)+"%";
+      if(l<=0){clearInterval(tm);$("an").disabled=true;$("sb").disabled=true}
+    },100);
+  }else if(d.t==="fb"){
+    if(d.ok){got=true;$("fb").textContent="Doğru: "+(d.player||"")+" ✓ (rakip göremez)";$("fb").className="ok";$("an").disabled=true;$("sb").disabled=true}
+    else{$("fb").textContent="Yanlış, tekrar dene.";$("fb").className="no";if(Date.now()<end){$("an").disabled=false;$("sb").disabled=false;$("an").value="";$("an").focus()}}
+  }else if(d.t==="result"){
+    $("me").textContent=d.me;$("op").textContent=d.opp;
+    let m=d.won?"Bu turu sen kazandın! +1":d.lost?"Rakip bu turu aldı.":d.both?"İkiniz de doğru bildiniz, puan yok.":"İkiniz de bulamadınız, puan yok.";
+    if(d.over){m=(d.win?"🏆 Maçı kazandın! ":"Rakip kazandı. ")+d.me+" - "+d.opp;$("again").classList.remove("hide")}
+    $("res").textContent=m;$("res").classList.remove("hide");
+  }else if(d.t==="left"){
+    clearInterval(tm);show("wait");$("rc").textContent="Rakip ayrıldı";
+  }
+};
+function submit(){const v=$("an").value.trim();if(!v||got)return;$("an").disabled=true;$("sb").disabled=true;$("fb").textContent="Kontrol ediliyor…";$("fb").className="mu";send({t:"answer",text:v})}
+$("sb").onclick=submit;
+$("an").onkeydown=e=>{if(e.key==="Enter")submit()};
+$("mk").onclick=()=>send({t:"create"});
+$("jn").onclick=()=>{const c=$("cd").value.trim().toLowerCase();if(!/^[a-z]{4}$/.test(c)){$("lm").textContent="4 harfli kodu gir.";return}send({t:"join",code:c})};
+$("again").onclick=()=>send({t:"again"});
+</script>
+</body>
+</html>

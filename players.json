@@ -1,0 +1,484 @@
+{
+ "Wesley Sneijder": [
+  "Real Madrid",
+  "Inter",
+  "Galatasaray"
+ ],
+ "Didier Drogba": [
+  "Chelsea",
+  "Marsilya",
+  "Galatasaray"
+ ],
+ "Radamel Falcao": [
+  "Atlético Madrid",
+  "Monaco",
+  "Galatasaray",
+  "Manchester United",
+  "Chelsea"
+ ],
+ "Robin van Persie": [
+  "Arsenal",
+  "Manchester United",
+  "Fenerbahçe"
+ ],
+ "Dirk Kuyt": [
+  "Liverpool",
+  "Fenerbahçe"
+ ],
+ "Nicolas Anelka": [
+  "Real Madrid",
+  "Arsenal",
+  "PSG",
+  "Liverpool",
+  "Manchester City",
+  "Chelsea",
+  "Fenerbahçe",
+  "Juventus"
+ ],
+ "Cristiano Ronaldo": [
+  "Manchester United",
+  "Real Madrid",
+  "Juventus"
+ ],
+ "Lionel Messi": [
+  "Barcelona",
+  "PSG"
+ ],
+ "Neymar": [
+  "Barcelona",
+  "PSG"
+ ],
+ "Zlatan İbrahimović": [
+  "Juventus",
+  "Inter",
+  "Barcelona",
+  "Milan",
+  "PSG",
+  "Manchester United"
+ ],
+ "Thierry Henry": [
+  "Monaco",
+  "Juventus",
+  "Arsenal",
+  "Barcelona"
+ ],
+ "Kaká": [
+  "Milan",
+  "Real Madrid"
+ ],
+ "Gareth Bale": [
+  "Tottenham",
+  "Real Madrid"
+ ],
+ "Luka Modrić": [
+  "Tottenham",
+  "Real Madrid"
+ ],
+ "Sergio Ramos": [
+  "Sevilla",
+  "Real Madrid",
+  "PSG"
+ ],
+ "Ángel Di María": [
+  "Real Madrid",
+  "Manchester United",
+  "PSG",
+  "Juventus"
+ ],
+ "Gonzalo Higuaín": [
+  "Real Madrid",
+  "Napoli",
+  "Juventus",
+  "Milan",
+  "Chelsea"
+ ],
+ "Romelu Lukaku": [
+  "Chelsea",
+  "Everton",
+  "Manchester United",
+  "Inter",
+  "Roma",
+  "Napoli"
+ ],
+ "Álvaro Morata": [
+  "Real Madrid",
+  "Juventus",
+  "Chelsea",
+  "Atlético Madrid",
+  "Milan",
+  "Galatasaray"
+ ],
+ "Paul Pogba": [
+  "Manchester United",
+  "Juventus"
+ ],
+ "Mesut Özil": [
+  "Schalke",
+  "Real Madrid",
+  "Arsenal",
+  "Fenerbahçe"
+ ],
+ "Edin Džeko": [
+  "Wolfsburg",
+  "Manchester City",
+  "Roma",
+  "Inter",
+  "Fenerbahçe"
+ ],
+ "Mario Götze": [
+  "Dortmund",
+  "Bayern Münih"
+ ],
+ "Robert Lewandowski": [
+  "Dortmund",
+  "Bayern Münih",
+  "Barcelona"
+ ],
+ "Mats Hummels": [
+  "Bayern Münih",
+  "Dortmund"
+ ],
+ "Ousmane Dembélé": [
+  "Dortmund",
+  "Barcelona",
+  "PSG"
+ ],
+ "Erling Haaland": [
+  "Dortmund",
+  "Manchester City"
+ ],
+ "Jadon Sancho": [
+  "Manchester City",
+  "Dortmund",
+  "Manchester United",
+  "Chelsea"
+ ],
+ "Kevin De Bruyne": [
+  "Chelsea",
+  "Wolfsburg",
+  "Manchester City",
+  "Napoli"
+ ],
+ "Mohamed Salah": [
+  "Chelsea",
+  "Fiorentina",
+  "Roma",
+  "Liverpool"
+ ],
+ "Philippe Coutinho": [
+  "Inter",
+  "Liverpool",
+  "Barcelona",
+  "Bayern Münih"
+ ],
+ "Luis Suárez": [
+  "Liverpool",
+  "Barcelona",
+  "Atlético Madrid"
+ ],
+ "Fernando Torres": [
+  "Atlético Madrid",
+  "Liverpool",
+  "Chelsea",
+  "Milan"
+ ],
+ "Xabi Alonso": [
+  "Liverpool",
+  "Real Madrid",
+  "Bayern Münih"
+ ],
+ "Arturo Vidal": [
+  "Juventus",
+  "Bayern Münih",
+  "Barcelona",
+  "Inter",
+  "Leverkusen"
+ ],
+ "Hakan Çalhanoğlu": [
+  "Leverkusen",
+  "Milan",
+  "Inter"
+ ],
+ "Arda Turan": [
+  "Galatasaray",
+  "Atlético Madrid",
+  "Barcelona"
+ ],
+ "Emre Belözoğlu": [
+  "Galatasaray",
+  "Inter",
+  "Newcastle",
+  "Fenerbahçe"
+ ],
+ "Hakan Şükür": [
+  "Galatasaray",
+  "Inter"
+ ],
+ "Burak Yılmaz": [
+  "Trabzonspor",
+  "Beşiktaş",
+  "Fenerbahçe",
+  "Galatasaray",
+  "Lille"
+ ],
+ "Cenk Tosun": [
+  "Beşiktaş",
+  "Everton"
+ ],
+ "Cengiz Ünder": [
+  "Roma",
+  "Marsilya",
+  "Fenerbahçe"
+ ],
+ "Ricardo Quaresma": [
+  "Barcelona",
+  "Inter",
+  "Beşiktaş"
+ ],
+ "Mario Gómez": [
+  "Bayern Münih",
+  "Fiorentina",
+  "Beşiktaş"
+ ],
+ "Pepe": [
+  "Real Madrid",
+  "Beşiktaş"
+ ],
+ "Demba Ba": [
+  "West Ham",
+  "Newcastle",
+  "Chelsea",
+  "Beşiktaş"
+ ],
+ "Gökhan İnler": [
+  "Napoli",
+  "Beşiktaş"
+ ],
+ "Fred": [
+  "Manchester United",
+  "Fenerbahçe"
+ ],
+ "Mauro Icardi": [
+  "Inter",
+  "PSG",
+  "Galatasaray"
+ ],
+ "Dries Mertens": [
+  "Napoli",
+  "Galatasaray"
+ ],
+ "Lucas Torreira": [
+  "Arsenal",
+  "Atlético Madrid",
+  "Fiorentina",
+  "Galatasaray"
+ ],
+ "Wilfried Zaha": [
+  "Manchester United",
+  "Galatasaray"
+ ],
+ "Michy Batshuayi": [
+  "Marsilya",
+  "Chelsea",
+  "Dortmund",
+  "Valencia",
+  "Beşiktaş",
+  "Galatasaray",
+  "Fenerbahçe"
+ ],
+ "Roberto Carlos": [
+  "Inter",
+  "Real Madrid",
+  "Fenerbahçe"
+ ],
+ "Wayne Rooney": [
+  "Everton",
+  "Manchester United"
+ ],
+ "Rio Ferdinand": [
+  "West Ham",
+  "Manchester United"
+ ],
+ "Frank Lampard": [
+  "West Ham",
+  "Chelsea",
+  "Manchester City"
+ ],
+ "Carlos Tevez": [
+  "West Ham",
+  "Manchester United",
+  "Manchester City",
+  "Juventus"
+ ],
+ "Samir Nasri": [
+  "Marsilya",
+  "Arsenal",
+  "Manchester City",
+  "Sevilla"
+ ],
+ "Cesc Fàbregas": [
+  "Arsenal",
+  "Barcelona",
+  "Chelsea",
+  "Monaco"
+ ],
+ "Gaël Clichy": [
+  "Arsenal",
+  "Manchester City"
+ ],
+ "Kyle Walker": [
+  "Tottenham",
+  "Manchester City"
+ ],
+ "Harry Kane": [
+  "Tottenham",
+  "Bayern Münih"
+ ],
+ "Raheem Sterling": [
+  "Liverpool",
+  "Manchester City",
+  "Chelsea",
+  "Arsenal"
+ ],
+ "Eden Hazard": [
+  "Lille",
+  "Chelsea",
+  "Real Madrid"
+ ],
+ "Thibaut Courtois": [
+  "Atlético Madrid",
+  "Chelsea",
+  "Real Madrid"
+ ],
+ "Kylian Mbappé": [
+  "Monaco",
+  "PSG",
+  "Real Madrid"
+ ],
+ "Andrea Pirlo": [
+  "Inter",
+  "Milan",
+  "Juventus"
+ ],
+ "Gianluigi Buffon": [
+  "Juventus",
+  "PSG"
+ ],
+ "Edinson Cavani": [
+  "Napoli",
+  "PSG",
+  "Manchester United",
+  "Valencia"
+ ],
+ "Alexis Sánchez": [
+  "Barcelona",
+  "Arsenal",
+  "Manchester United",
+  "Inter"
+ ],
+ "Zinedine Zidane": [
+  "Juventus",
+  "Real Madrid"
+ ],
+ "Ronaldo Nazário": [
+  "Barcelona",
+  "Inter",
+  "Real Madrid",
+  "Milan"
+ ],
+ "Clarence Seedorf": [
+  "Real Madrid",
+  "Inter",
+  "Milan"
+ ],
+ "David Beckham": [
+  "Manchester United",
+  "Real Madrid",
+  "Milan",
+  "PSG"
+ ],
+ "Patrick Vieira": [
+  "Milan",
+  "Arsenal",
+  "Juventus",
+  "Inter",
+  "Manchester City"
+ ],
+ "Mario Balotelli": [
+  "Inter",
+  "Manchester City",
+  "Milan",
+  "Liverpool"
+ ],
+ "Thiago Silva": [
+  "Milan",
+  "PSG",
+  "Chelsea"
+ ],
+ "Samuel Eto'o": [
+  "Barcelona",
+  "Inter",
+  "Chelsea"
+ ],
+ "Hernán Crespo": [
+  "Lazio",
+  "Inter",
+  "Chelsea",
+  "Milan"
+ ],
+ "Gabriel Batistuta": [
+  "Fiorentina",
+  "Roma",
+  "Inter"
+ ],
+ "Kevin-Prince Boateng": [
+  "Tottenham",
+  "Milan",
+  "Schalke",
+  "Barcelona"
+ ],
+ "Antonio Rüdiger": [
+  "Roma",
+  "Chelsea",
+  "Real Madrid"
+ ],
+ "Leroy Sané": [
+  "Schalke",
+  "Manchester City",
+  "Bayern Münih",
+  "Galatasaray"
+ ],
+ "Nuri Şahin": [
+  "Dortmund",
+  "Real Madrid",
+  "Liverpool"
+ ],
+ "Hamit Altıntop": [
+  "Schalke",
+  "Bayern Münih",
+  "Real Madrid",
+  "Galatasaray"
+ ],
+ "Sergio Agüero": [
+  "Atlético Madrid",
+  "Manchester City",
+  "Barcelona"
+ ],
+ "Diego Costa": [
+  "Atlético Madrid",
+  "Chelsea"
+ ],
+ "Mario Mandžukić": [
+  "Wolfsburg",
+  "Bayern Münih",
+  "Atlético Madrid",
+  "Juventus",
+  "Milan"
+ ],
+ "Franck Ribéry": [
+  "Marsilya",
+  "Galatasaray",
+  "Bayern Münih",
+  "Fiorentina"
+ ]
+}
